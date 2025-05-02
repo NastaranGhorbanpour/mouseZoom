@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/output.css">
+    <link rel="stylesheet" href="assets/font/css/fontello.css">
+</head>
+<body class="relative">
+    <div class="w-full h-[100vh] *:w-1/3 *:h-full flex flex-wrap *:object-cover *:overflow-hidden">
+        <div class="*:w-full *:h-full *:object-cover *:duration-500 "><img id="f-zoom" src="assets/img/1.jpg" alt=""></div>
+        <div class="*:w-full *:h-full *:object-cover *:duration-500 "><img id="s-zoom" src="assets/img/3.jpg" alt=""></div>
+        <div class="*:w-full *:h-full *:object-cover *:duration-500 "><img id="t-zoom" src="assets/img/2.jpg" alt=""></div>
+    </div>
+
+    <figure class="group z-50 w-[150px] h-[150px] absolute bottom-[40px] left-[25px] ">
+
+
+        <img class="w-full h-full object-cover absolute top-0 left-0 firstAnime" src="assets/img/me.JPG" alt="">
+
+        <figcaption class="font-[caveat] absolute -bottom-[25px] left-0 text-[18px] text-[rgb(148, 87, 67)]">Nastaran Ghorbanpour</figcaption>
+
+        <a href="https://github.com/NastaranGhorbanpour" class="icon-github-circled decoration-0 w-[15px] h-[15px] absolute right-[40%] text-[20px] -z-10 duration-1000 text-[rgb(85, 57, 21)] hover:text-[rgb(148, 87, 67)] bottom-[20px] group-hover:-right-[20%] group-hover:z-50"></a>
+        <a href="https://www.linkedin.com/in/nastaran-ghorbanpour-027a7b349/" class="icon-linkedin decoration-0 w-[15px] h-[15px] absolute right-[40%] text-[20px] -z-10 duration-1000 text-[rgb(85, 57, 21)] hover:text-[rgb(148, 87, 67)] bottom-[70px] group-hover:-right-[20%] group-hover:z-50"></a>
+        <a href="https://www.instagram.com/nestacode.lab/" class="icon-instagram decoration-0 w-[15px] h-[15px] absolute right-[40%] text-[20px] -z-10 duration-1000 text-[rgb(85, 57, 21)] hover:text-[rgb(148, 87, 67)] bottom-[120px] group-hover:-right-[20%] group-hover:z-50"></a>
+    </figure>
+    
+</body>
+<script>
+    const FirstZoom = document.getElementById('f-zoom')
+    const secondZoom = document.getElementById('s-zoom')
+    const thirdZoom = document.getElementById('t-zoom')
+
+    FirstZoom.addEventListener('mousemove' , (e)=>{
+        let x = ((e.offsetX)/5)-(FirstZoom.clientWidth/10)
+        let y = ((e.offsetY)/5)-(FirstZoom.clientHeight/10)
+
+        FirstZoom.style.scale='1.2'
+        FirstZoom.style.transform='perspective(800px)translateX('+(-x)+'px)translateY('+(-y)+'px)'
+    })
+    FirstZoom.addEventListener('mouseleave' , ()=>{
+        FirstZoom.style.scale='1'
+        FirstZoom.style.transform='translateX(0)translateY(0)'
+    })
+
+
+    secondZoom.addEventListener('mousemove' , (e)=>{
+        let x = ((e.offsetX)/5)-(secondZoom.clientWidth/10)
+        let y = ((e.offsetY)/5)-(secondZoom.clientHeight/10)
+
+        secondZoom.style.scale='1.4'
+        secondZoom.style.transform='perspective(800px)translateX('+(-x)+'px)translateY('+(-y)+'px)'
+    })
+    secondZoom.addEventListener('mouseleave' , ()=>{
+        secondZoom.style.scale='1'
+        secondZoom.style.transform='translateX(0)translateY(0)'
+    })
+
+
+    thirdZoom.addEventListener('mousemove' , (e)=>{
+        let x = ((e.offsetX)/5)-(thirdZoom.clientWidth/10)
+        let y = ((e.offsetY)/5)-(thirdZoom.clientHeight/10)
+
+        thirdZoom.style.scale='1.6'
+        thirdZoom.style.transform='perspective(800px)translateX('+(-x)+'px)translateY('+(-y)+'px)'
+    })
+    thirdZoom.addEventListener('mouseleave' , ()=>{
+        thirdZoom.style.scale='1'
+        thirdZoom.style.transform='translateX(0)translateY(0)'
+    })
+    
+
+    
+</script>
+</html>
